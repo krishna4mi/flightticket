@@ -39,8 +39,11 @@ class HomeScreen extends StatelessWidget {
 }
 
 
+
 TextStyle dropDownLabelStyle = TextStyle(color: Colors.white,fontSize: 16.0);
 TextStyle dropDownMenuStyle = TextStyle(color: Colors.black,fontSize: 16.0);
+TextStyle viewAllStyle = TextStyle(color: appTheme.primaryColor,fontSize: 14.0);
+
 
 
 class HomeScreenTop extends StatefulWidget {
@@ -223,6 +226,59 @@ class _ChoiceChipState extends State<ChoiceChip> {
         ],
       ),
     );
+  }
+}
+
+Widget homeScreenBottomPart = Container(
+  
+  child:Column(
+  children: <Widget>[
+    Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20.0,vertical: 10.0),
+          child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // crossAxisAlignment: CrossAxirrRsAlignment.stretch,
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          // SizedBox(width: 16.0,),
+          
+          Text("Currently Watched items",style:dropDownMenuStyle),
+          Text("View All(12)",style:viewAllStyle),
+        ],
+      ),
+    ),
+    Container(
+      height: 210.0,
+          child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Container(height: 210,width: 100.0,),
+          Container(height: 210,),
+          Container(height: 210,),
+        ],
+      ),
+    )
+  ],
+  )
+);
+
+List<CityCard> cityCards =[
+  CityCard("assets/images/lasvegas.jpg", "LaseVegas", "2016", "30%", "45", "49"),
+  CityCard("assets/images/athens.jpg", "Athens", "2017", "35%", "54", "41"),
+  CityCard("assets/images/sydney.jpeg", "LaseVegas", "2016", "30%", "42", "69"),
+  
+];
+
+class CityCard extends StatelessWidget {
+  final String imagePath,cityName,monthYear,discount,oldPrice,newPrice;
+
+  CityCard(this.imagePath,this.cityName,this.monthYear,this.discount,this.oldPrice,this.newPrice);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(children: <Widget>[
+      Container(child: Image.asset("assets/images/"),)
+    ],);
   }
 }
 
