@@ -61,14 +61,14 @@ var isFlightSelcted = true;
         ClipPath(
           clipper: CustomShapeClipper(),
           child: Container(
-            height: 400.0,
+            height: 320.0,
             decoration: BoxDecoration(gradient: LinearGradient(
               colors: [firstColor,secondColor],
 
             )),
             child: Column(
               children: <Widget>[
-                SizedBox(height: 50.0,),
+                SizedBox(height: 30.0,),
                 Padding(
                   padding: const EdgeInsets.all(16.0),
                     child: Row(
@@ -110,9 +110,9 @@ var isFlightSelcted = true;
                       ],
                     ),
                 ),
-                SizedBox(height: 50.0,),
+                SizedBox(height: 10.0,),
                 Text("Where would\n you want to go?", style:TextStyle(fontSize:24.0,color: Colors.white,),textAlign: TextAlign.center,),
-                SizedBox(height: 30.0,),
+                SizedBox(height: 10.0,),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32.0),
                   child: Material(
@@ -136,7 +136,7 @@ var isFlightSelcted = true;
                       ),
                     ),
                   ),),
-                  SizedBox(height: 30.0,),
+                  SizedBox(height: 10.0,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.min,
